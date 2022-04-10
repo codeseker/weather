@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMMOAADDDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAA2BQQIWCQWWlgkFls2BQQIAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFEQoAQhEKG285IpldKRhMThsQQqJmPfGiZj3xThsQQl0pGExvOSKZQhEKGkkSCwAAAAAAAAAAAGUqIQA/Ew4edUo9eX5SRLiSWTf9gFA72HxQQcOzdkj/s3ZI/3xQQcOATzvYll06+qR8aaOie2h7kGpaIgAAAAEyAAAZk2pauOG/pP/uzbD/p35o/9aymP/qya3/nmxP/55tUP/qya3/1rKY/6h+aP/y0rX/9ta4/bGLds5CEQwtYTQqY9WymPn/4cH//d6///navP/83b7//t/A/9e0mv/XtJr//t/A//zdvv/52rz//+DB/+3NsP/NqpH9az4zcms+M3XfvqP+/t/A//zdvv/93r//89S2//XWuP/+38D//d+///zdvv/83b7/99i5/8unj/+zjXj/u5aA+WU3LWFLGxQ4s4144vravP//4MH/9da4/7iTff/oyKv//d6///zdvv/93r///N2+//vcvf/UsZf/t5F8+YpgUKUwAAAUAAAAAmM2LFeje2nNuJN99LCJdf/QrJP//N2+//zdvv/42bv/58aq//3ev///4MD/rYdy4U8gGVEsBgQPQg4KAAEAAAAAAAABCgAAEW5CNpS9mIH/4sGm//7gwP/83b7/+dq7/7aRe//Pq5L/0a2T/3pOQKE2BAA9Pw4JBz8NCQAAAAAAPAsGALKMdwCPZlZMy6eP87eSfP/01Lb/99e5///hwf++n4v/SXCL/0V4mP08KzN+PwcAIz8OCQE/DgkAAAAAAAAAAABmOS8ATR4XD5lxX7XGoor/1bKZ/9GulP/fvKD/aXyK/zKu7f81ntb/O0xhwUAFAEo/DgkkPw4JAAAAAAAAAAAABAAAAGQtIwBBFA8hgVdJj6V9asmRcWPoVnyU/zSm4f81pN3/OW6R/ztHWrBAAQAsPw4JFj8OCQAAAAAAAAAAAAAAAAAAAAAAKgEAACcAAAc2AwBMNhcbZzZ5ouY2nNL/OW6R/zpffOU+JChdPwwGOj8OCQQ/DgkAAAAAAAAAAAAAAAAAAAAAAD8OCQA/DgkGPw4JJEAGABY+HR9cPEBQpzxAUKY+ICJbQAUAFj8OCSU/DgkGPw4JAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8OCQA/DgkwPw4JKj8LBTk/CwU4Pw4JKz8OCS8/DgkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/DgkAPw4JBD8OCQA/DgkbPw4JGj8OCQA/DgkEPw4JAAAAAAAAAAAA4AcAAOAHAACAAAAAAAAAAAAAAAAAAAAAAAAAAAABAACAAQAA4AEAAOABAADwAQAA+AEAAPgBAAD+BwAA/gcAAA==" type="image/x-icon">
+    <title>Weather</title>
+    
+  <link rel="stylesheet" href="/assets/index.58c28485.css">
+</head>
+<body>
+    <div class="main flex flex-col-reverse sm:flex sm:flex-col-reverse xl:flex xl:flex-row 2xl:flex 2xl:flex-row lg:flex lg:flex-row md:flex md:flex-row">
+        <div
+            class="left p-3 h-[50vh] xl:h-[100vh] xl:w-[60vw] sm:h-[50vh] sm:flex sm:p-24  sm:justify-between sm:items-center xl:flex xl:items-center xl:justify-evenly md:h-[100vh] md:w-[60vw] md:flex md:items-center md:justify-evenly lg:h-[100vh] lg:w-[60vw] lg:flex lg:items-center lg:justify-evenly">
+            <div class="leftOne xl:flex xl:flex-col 2xl:flex 2xl:flex-col lg:flex lg:flex-col md:flex md:flex-col">
+                <h1 id="temp_c"
+                    class="font-semibold xl:text-[5rem] 2xl:text-[5rem] md:text-[5rem] sm:text-[5rem] lg:text-[5rem] text-[5rem] text-white">0.0°C
+                </h1>
+                <span id="city"
+                    class="font-medium xl:text-[1rem] 2xl:text-[1rem] md:text-[1rem] lg:text-[1rem] sm:text-[1rem] text-[1rem] text-white"></span>
+                <span id="date"
+                    class="font-medium 2xl:text-[1rem] xl:text-[1rem] lg:text-[1rem] md:text-[1rem] sm:text-[1rem] text-[1rem] text-white"></span>
+            </div>
+            <div
+                class="rightOne xl:flex xl:flex-col xl:items-center 2xl:flex 2xl:flex-col 2xl:items-center md:flex md:flex-col md:items-center lg:flex lg:flex-col lg:items-center">
+                <div id="imga">
+                    <img id="getIcon" src="" class="xl:w-16 2xl:w-16 md:w-16 lg:w-16 sm:w-16 w-16" alt="">
+                </div>
+                <span id="type"
+                    class="xl:font-medium xl:text-[1rem] 2xl:font-medium 2xl:text-[1rem] md:font-medium md:text-[1rem] lg:font-medium lg:text-[1rem] text-white">
+                </span>
+            </div>
+        </div>
+        <div
+            class="right h-[50vh] xl:h-[100vh] 2xl:h-[100vh] md:h-[100vh] lg:h-[100vh] sm:h-[70vh]  text-black xl:w-[40vw] xl:flex xl:flex-col xl:p-10 xl:space-y-48 md:w-[40vw] md:flex md:flex-col md:py-10 md:px-10 md:space-y-48 2xl:w-[40vw] 2xl:flex 2xl:flex-col 2xl:p-10 2xl:space-y-48 lg:w-[40vw] lg:flex lg:flex-col lg:px-[1rem] lg:py-10 lg:space-y-48 sm:p-12 sm:space-y-10 py-8 px-10">
+            <div
+                class="top flex flex-col items-center justify-center 2xl:flex 2xl:flex-row 2xl:justify-between 2xl:items-baseline xl:flex xl:flex-row xl:justify-between xl:items-baseline lg:flex lg:flex-row lg:justify-between lg:items-baseline md:flex md:justify-between md:flex-col md:space-y-3 md:items-center sm:flex sm:justify-evenly sm:space-y-0 sm:flex-row space-y-2">
+                <div>
+                    <input type="text" id="getRegion"
+                        class="border-b-2 xl:w-64 2xl:w-64 md:w-64 sm:w-64 lg:w-60 active:border-gray-50 focus:outline-none focus:shadow-none rounded-md border-gray-200 text-center xl:h-[2.5rem] lg:h-[2.5rem] 2xl:h-[2.5rem] md:h-[2.5rem] sm:h-[2.5rem]  font-sans font-thin"
+                        placeholder="Enter your location">
+                </div>
+                <button id="getWeather"
+                    class="bg-transparent px-4 py-2  hover:bg-blue-500 text-blue-700 font-semibold hover:text-white 2xl:py-1 2xl:m-0 xl:m-0 lg:m-0  xl:py-1 lg:py-1 md:py-2 2xl:px-4 md:px-4 xl:px-4 lg:px-4 sm:px-4 sm:py-2 border  border-blue-500 hover:border-transparent rounded">
+                    Get Weather
+                </button>
+            </div>
+            <div class="bottom space-y-3 xl:space-y-7 lg:space-y-7 2xl:space-y-7 md:space-y-7 sm:space-y-7">
+                <hr>
+                <h1 class="font-sans font-normal xl:my-8 lg:my-8 2xl:my-8 md:my-8">Weather Details</h1>
+                <div
+                    class="flex justify-between xl:flex xl:justify-between 2xl:flex 2xl:justify-between md:flex md:justify-between lg:flex lg:justify-between font-sans font-thin sm:flex sm:justify-between">
+                    <p>Cloudy</p>
+                    <span class="font-semibold" id="cloudy"></span>
+                </div>
+                <div class="flex justify-between font-sans font-thin">
+                    <p>Humidity</p>
+                    <span class="font-semibold" id="humid"></span>
+                </div>
+                <div class="flex justify-between font-sans font-thin">
+                    <p>Wind</p>
+                    <span class="font-semibold" id="wind"></span>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <script src="https://codeseker.github.io/weather/index.js"></script>
+</body>
+</html>
